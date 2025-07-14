@@ -7,7 +7,11 @@ author: J.P.
 
 About three weeks ago, I discovered something that made my stomach drop.
 
-Buried deep in my pfSense ruleset, a leftover from early troubleshooting, was a rule that said: `Allow All Traffic (LAN -> Any)`. I had left the digital front door wide open while I was setting things up.
+Buried deep in my pfSense ruleset, a leftover from early troubleshooting, was a rule that said: 
+
+`Allow All Traffic (LAN -> Any)`. 
+
+I had left the digital front door wide open while I was setting things up.
 
 I fixed it immediately, of course. But the rule had been active for weeks, and I had no idea what, if anything, might have slipped through. The fear of the unknown is a powerful thing in cybersecurity.
 
