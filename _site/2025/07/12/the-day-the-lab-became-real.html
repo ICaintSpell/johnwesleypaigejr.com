@@ -1,0 +1,28 @@
+<article class="post">
+  <h1>The Day the Lab Became Real: Investigating My First Real Threat</h1>
+  <p class="post-meta">
+    <time datetime="2025-07-12T18:00:00-04:00">
+      July 12, 2025
+    </time>
+     • J.P.
+  </p>
+
+  <div class="post-content">
+    <p>About three weeks ago, I discovered something that made my stomach drop.</p>
+
+<p>Buried deep in my pfSense ruleset, a leftover from early troubleshooting, was a rule that said: <code class="language-plaintext highlighter-rouge">Allow All Traffic (LAN -&gt; Any)</code>. I had left the digital front door wide open while I was setting things up.</p>
+
+<p>I fixed it immediately, of course. But the rule had been active for weeks, and I had no idea what, if anything, might have slipped through. The fear of the unknown is a powerful thing in cybersecurity.</p>
+
+<p>On July 12, 2025, that fear became real. I got a Telegram ping from my Suricata alert pipeline:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SURICATA STREAM SHUTDOWN RST invalid ack
+{TCP} 24.210.78.186:80 -&gt; 202.112.237.233:12338
+</code></pre></div></div>
+
+<p>It was an outbound connection to an IP address in China, exhibiting behavior that matched patterns I’d seen for Command and Control (C2) channels.</p>
+
+<p>That was the moment everything changed. I wasn’t just monitoring traffic in a lab anymore. I was investigating a potential breach on my own network. This is no longer just an experiment; it’s a real-world defense scenario, and I’m documenting every step of the investigation. More to follow.</p>
+
+  </div>
+</article>

@@ -1,0 +1,35 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <header>
+    <!-- Your coat of arms image -->
+    <img src="/assets/img/coat-of-arms.png" alt="Family Coat of Arms" class="header-crest" onerror="this.style.display='none'">
+    
+    <h1>John Wesley Paige Jr.</h1>
+    <p>Cybersecurity | Cloud | Defender</p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/resume.html">Resume</a>
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; {% assign current_year = 'now' | date: '%Y' %}{{ current_year }} John Wesley Paige Jr.</p>
+    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </footer>
+</body>
+</html>

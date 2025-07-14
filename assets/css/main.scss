@@ -1,0 +1,158 @@
+---
+---
+/* assets/css/main.scss */
+:root {
+  --color-dark: #121212;
+  --color-grey: #a9a9a9;
+  --color-gold: #FFD700;
+  --color-pink: #FF69B4;
+  --color-light: #FFFFFF;
+  --color-bg-alt: #222;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--color-dark);
+    color: var(--color-grey);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--color-bg-alt);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--color-gold);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--color-gold);
+}
+
+header p {
+    margin-top: 0.5rem;
+    color: var(--color-grey);
+    font-style: italic;
+}
+
+nav {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-pink);
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+h2, h3 {
+    color: var(--color-gold);
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+a {
+    color: var(--color-pink);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: '➤ ';
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    margin-top: 3rem;
+    border-top: 1px solid #333;
+}
+
+/* Header Crest Image */
+.header-crest {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+  height: auto;
+}
+
+/* Blog Post Styling */
+.post-list h3 a {
+    color: var(--color-gold);
+}
+.post-list li {
+    margin-bottom: 2rem;
+}
+.post-meta {
+    font-size: 0.9rem;
+    color: var(--color-grey);
+    font-style: italic;
+}
+.post-content {
+    margin-top: 2rem;
+}
+
+/* Resume Page Styling */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-pink);
+  color: var(--color-light);
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #d84a96;
+  text-decoration: none;
+}
+
+.resume-container section {
+    margin-bottom: 2rem;
+}
+
+.job {
+    margin-top: 1rem;
+}
+.job h4 {
+    margin-bottom: 0.25rem;
+    color: var(--color-light);
+}
+.job p {
+    margin: 0;
+    font-style: italic;
+}
