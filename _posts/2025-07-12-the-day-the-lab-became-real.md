@@ -15,6 +15,7 @@ On July 12, 2025, that fear became real. I got a Telegram ping from my Suricata 
 
 ```
 SURICATA STREAM SHUTDOWN RST invalid ack
+
 {TCP} 24.210.78.186:80 -> 202.112.237.233:12338
 ```
 
