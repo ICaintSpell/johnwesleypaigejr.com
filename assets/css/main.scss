@@ -22,8 +22,15 @@ body {
 header {
     background: var(--color-bg-alt);
     padding: 2rem;
-    text-align: center;
     border-bottom: 3px solid var(--color-gold);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.header-content {
+    flex: 1; /* Allows this content to fill the remaining space */
 }
 
 header h1 {
@@ -41,7 +48,7 @@ header p {
 nav {
     margin-top: 1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Aligns nav items to the left */
     gap: 2rem;
 }
 
@@ -94,8 +101,7 @@ footer {
 /* Header Crest Image */
 .header-crest {
   display: block;
-  margin: 0 auto 20px;
-  width: 100px;
+  width: 150px; /* Increased size */
   height: auto;
 }
 
@@ -113,6 +119,21 @@ footer {
 }
 .post-content {
     margin-top: 2rem;
+}
+
+/* NEW: Styling for code blocks in posts */
+.code-block,
+pre,
+code {
+  background-color: #2d2d2d; /* A slightly lighter dark grey */
+  color: #f8f8f2; /* Off-white text for contrast */
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto; /* For horizontal scrolling on small screens */
+  font-size: 0.9rem;
+  white-space: pre-wrap; /* Wraps long lines */
+  border: 1px solid #444;
 }
 
 /* Resume Page Styling */

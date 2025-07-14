@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Day the Lab Became Real: Investigating My First Real Threat"
+title: "Welcome to my blog!!!"
 date: 2025-05-06 10:30:00 -0400
 author: J.P.
 ---
