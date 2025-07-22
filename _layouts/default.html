@@ -32,18 +32,20 @@
     <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   </footer>
 
-  <!-- NEW: JavaScript for Smooth Scrolling -->
+  <!-- UPDATED: JavaScript for Smooth Scrolling -->
   <script>
-    document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(2);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(2);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>
