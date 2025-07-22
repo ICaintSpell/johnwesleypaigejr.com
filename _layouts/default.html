@@ -14,7 +14,14 @@
       <h1>John Wesley Paige Jr.</h1>
     </a>
     
-    <nav>
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="main-nav">
       <a href="/#about">About</a>
       <a href="/#resume">Resume</a>
       <a href="/#blog">Blog</a>
@@ -32,9 +39,10 @@
     <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   </footer>
 
-  <!-- UPDATED: JavaScript for Smooth Scrolling -->
+  <!-- UPDATED: JavaScript for Scrolling and Mobile Menu -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Smooth Scrolling Logic
       document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -45,7 +53,16 @@
               behavior: 'smooth'
             });
           }
+          // Close mobile menu after clicking a link
+          document.getElementById('main-nav').classList.remove('is-open');
         });
+      });
+
+      // Mobile Menu Toggle Logic
+      const menuButton = document.getElementById('mobile-menu-button');
+      const nav = document.getElementById('main-nav');
+      menuButton.addEventListener('click', function() {
+        nav.classList.toggle('is-open');
       });
     });
   </script>
