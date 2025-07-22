@@ -39,31 +39,42 @@
     <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   </footer>
 
-  <!-- UPDATED: JavaScript for Scrolling and Mobile Menu -->
+  <!-- DEFINITIVE SCRIPT for Scrolling and Mobile Menu -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Smooth Scrolling Logic
-      document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
+      // --- Smooth Scrolling Logic ---
+      const scrollLinks = document.querySelectorAll('a[href^="/#"]');
+      
+      scrollLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
+          
           const targetId = this.getAttribute('href').substring(2);
           const targetElement = document.getElementById(targetId);
+          
           if (targetElement) {
             targetElement.scrollIntoView({
               behavior: 'smooth'
             });
           }
-          // Close mobile menu after clicking a link
-          document.getElementById('main-nav').classList.remove('is-open');
+
+          // --- Close mobile menu after clicking a link ---
+          const nav = document.getElementById('main-nav');
+          if (nav.classList.contains('is-open')) {
+            nav.classList.remove('is-open');
+          }
         });
       });
 
-      // Mobile Menu Toggle Logic
+      // --- Mobile Menu Toggle Logic ---
       const menuButton = document.getElementById('mobile-menu-button');
       const nav = document.getElementById('main-nav');
-      menuButton.addEventListener('click', function() {
-        nav.classList.toggle('is-open');
-      });
+      
+      if (menuButton && nav) {
+        menuButton.addEventListener('click', function() {
+          nav.classList.toggle('is-open');
+        });
+      }
     });
   </script>
 </body>

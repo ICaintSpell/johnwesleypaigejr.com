@@ -2,13 +2,12 @@
 ---
 /* assets/css/main.scss */
 
-/* New "Coat of Arms" Color Palette */
+/* "Coat of Arms" Color Palette */
 :root {
-  --color-bg: #FDFBF7; /* Parchment / Off-white */
-  --color-text: #3D405B; /* Dark Slate */
-  --color-heading: #2E4636; /* Deep Green */
-  --color-accent: #D5A021; /* Gold */
-  --color-highlight: #D8A0A6; /* Muted Rose */
+  --color-bg: #FDFBF7;
+  --color-text: #3D405B;
+  --color-heading: #2E4636;
+  --color-accent: #D5A021;
   --color-light-gray: #E0E0E0;
 }
 
@@ -22,80 +21,49 @@ body {
 
 /* Header & Navigation */
 header {
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--color-light-gray);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative; /* Needed for mobile menu positioning */
+    position: relative;
 }
 
 .header-brand {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    text-decoration: none;
 }
 
 .header-crest {
-    width: 60px;
+    width: 50px;
     height: auto;
 }
 
 .header-brand h1 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
     color: var(--color-heading);
 }
 
 /* Desktop Navigation */
-nav {
-    display: none; /* Hidden by default on mobile */
-}
 @media (min-width: 768px) {
     nav {
-        display: block; /* Visible on medium screens and up */
+        display: flex;
+        align-items: center;
     }
 }
 
 nav a {
-    color: var(--color-text);
     text-decoration: none;
     font-weight: 500;
-    margin-left: 2rem;
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: var(--color-accent);
-}
-
-/* Mobile Menu Button ("Hamburger") */
-#mobile-menu-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-@media (min-width: 768px) {
-    #mobile-menu-button {
-        display: none; /* Hide on desktop */
-    }
-}
-#mobile-menu-button .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-heading);
-    border-radius: 3px;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Mobile Navigation Menu (Dropdown) */
-nav.is-open {
-    display: flex;
+/* Mobile Navigation (Hidden by default) */
+nav {
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -103,34 +71,84 @@ nav.is-open {
     width: 100%;
     background-color: white;
     border-bottom: 1px solid var(--color-light-gray);
-    padding: 1rem 2rem;
+    padding: 0.5rem 0;
     z-index: 10;
 }
-nav.is-open a {
-    margin: 0;
-    padding: 0.75rem 0;
-    text-align: center;
-    border-bottom: 1px solid #f0f0f0;
-}
-nav.is-open a:last-child {
-    border-bottom: none;
+
+nav.is-open {
+    display: flex; /* This makes the mobile menu appear */
 }
 
+nav a {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--color-text);
+}
+nav a:last-child {
+    border-bottom: none;
+}
+nav a:hover {
+    background-color: #f7f7f7;
+    color: var(--color-accent);
+}
+
+/* Desktop-specific link styles */
+@media (min-width: 768px) {
+    nav a {
+        padding: 0;
+        border-bottom: none;
+        margin-left: 2rem;
+    }
+    nav a:hover {
+        background-color: transparent;
+    }
+}
+
+
+/* Mobile Menu Button ("Hamburger") */
+#mobile-menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+@media (min-width: 768px) {
+    #mobile-menu-button {
+        display: none;
+    }
+}
+#mobile-menu-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-heading);
+    border-radius: 3px;
+}
 
 /* Main Content & Sections */
 main {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 4rem 0;
 }
 
 section h2 {
     color: var(--color-heading);
     font-weight: bold;
+    text-align: center;
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 3rem 1.5rem;
     margin-top: 3rem;
     background-color: #fff;
     border-top: 1px solid var(--color-light-gray);
@@ -167,5 +185,4 @@ footer {
   font-size: 0.9rem;
   white-space: pre-wrap;
   border: 1px solid #444;
-}
 
