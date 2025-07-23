@@ -17,13 +17,18 @@
 
 /* Base Styles with New Background Pattern */
 body {
-  background-image:
-    radial-gradient(circle at 20% 20%, var(--color-pattern-pink) 1px, transparent 0),
-    radial-gradient(circle at 80% 80%, var(--color-pattern-teal) 1px, transparent 0),
-    radial-gradient(circle at 50% 50%, var(--color-pattern-green) 1px, transparent 0);
-  background-size: 60px 60px;
   background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle, var(--color-pattern-pink) 2px, transparent 3px),
+    radial-gradient(circle, var(--color-pattern-teal) 2px, transparent 3px),
+    radial-gradient(circle, var(--color-pattern-green) 2px, transparent 3px);
+  background-position:
+    0 0,
+    30px 30px,
+    60px 60px;
+  background-size: 90px 90px;
 }
+
 /* Header & Navigation */
 header {
   padding: 1rem 1.5rem;
