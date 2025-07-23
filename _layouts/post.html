@@ -1,24 +1,24 @@
 ---
 layout: default
 ---
-<article class="post">
-  <h1>{{ page.title }}</h1>
-  <p class="post-meta">
+
+<article class="post max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md my-12">
+  <h1 class="text-3xl font-bold mb-4">{{ page.title }}</h1>
+  <p class="post-meta text-gray-600 italic mb-6">
     <time datetime="{{ page.date | date_to_xmlschema }}">
       {{ page.date | date: "%B %d, %Y" }}
-    </time>
-    {% if page.author %} • {{ page.author }}{% endif %}
+    </time> &nbsp;|&nbsp; {{ page.author }}
   </p>
 
-  <div class="post-content">
+  <div class="post-content prose max-w-none">
     {{ content }}
   </div>
 </article>
 
-<hr>
+<hr class="my-12">
 
-<section id="comments">
-  <h2>Comments</h2>
+<section id="comments" class="max-w-3xl mx-auto">
+  <h2 class="text-2xl font-semibold mb-4">Comments</h2>
   <script src="https://giscus.app/client.js"
         data-repo="ICaintSpell/johnwesleypaigejr.com"
         data-repo-id="R_kgDOPMDrpA"
