@@ -20,23 +20,23 @@
         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
       <nav id="main-nav" class="hidden md:flex space-x-6">
-        <a href="/#about" class="hover:text-yellow-400">About</a>
-        <a href="/#resume" class="hover:text-yellow-400">Resume</a>
-        <a href="/#blog" class="hover:text-yellow-400">Blog</a>
-        <a href="/#projects" class="hover:text-yellow-400">Projects</a>
-        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="hover:text-yellow-400" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/john-paige-jr" target="_blank" class="hover:text-yellow-400" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#about" class="hover:text-yellow-400">About</a>
+        <a href="#resume" class="hover:text-yellow-400">Resume</a>
+        <a href="#blog" class="hover:text-yellow-400">Blog</a>
+        <a href="#projects" class="hover:text-yellow-400">Projects</a>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="hover:text-yellow-400">GitHub</a>
+        <a href="https://www.linkedin.com/in/john-paige-jr" target="_blank" class="hover:text-yellow-400">LinkedIn</a>
       </nav>
     </div>
 
     <!-- MOBILE MENU -->
     <div id="mobile-nav" class="md:hidden hidden px-4 pb-4 space-y-2 bg-gray-800">
-      <a href="/#about" class="block text-white hover:text-yellow-400">About</a>
-      <a href="/#resume" class="block text-white hover:text-yellow-400">Resume</a>
-      <a href="/#blog" class="block text-white hover:text-yellow-400">Blog</a>
-      <a href="/#projects" class="block text-white hover:text-yellow-400">Projects</a>
-      <a href="https://github.com/{{ site.github_username }}" target="_blank" class="block text-white hover:text-yellow-400" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/john-paige-jr" target="_blank" class="block text-white hover:text-yellow-400" rel="noopener noreferrer">LinkedIn</a>
+      <a href="#about" class="block text-white hover:text-yellow-400">About</a>
+      <a href="#resume" class="block text-white hover:text-yellow-400">Resume</a>
+      <a href="#blog" class="block text-white hover:text-yellow-400">Blog</a>
+      <a href="#projects" class="block text-white hover:text-yellow-400">Projects</a>
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" class="block text-white hover:text-yellow-400">GitHub</a>
+      <a href="https://www.linkedin.com/in/john-paige-jr" target="_blank" class="block text-white hover:text-yellow-400">LinkedIn</a>
     </div>
   </header>
 
@@ -46,29 +46,25 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white text-center py-6 mt-12 space-y-2">
+  <footer class="bg-gray-900 text-white text-center py-6 mt-12">
     <p class="text-sm">&copy; {% assign current_year = 'now' | date: '%Y' %}{{ current_year }} John Wesley Paige Jr.</p>
     <p><a href="mailto:{{ site.email }}" class="hover:text-yellow-400">{{ site.email }}</a></p>
-    <p class="text-sm space-x-4">
-      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400">GitHub</a>
-      <a href="https://www.linkedin.com/in/john-paige-jr" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400">LinkedIn</a>
-    </p>
   </footer>
 
   <!-- SCRIPT: Smooth Scroll + Mobile Toggle -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Smooth scroll
-      const scrollLinks = document.querySelectorAll('a[href^="/#"]');
+      // Smooth scroll for in-page anchors
+      const scrollLinks = document.querySelectorAll('a[href^="#"]');
       scrollLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
-          const targetId = this.getAttribute('href').substring(2);
+          const targetId = this.getAttribute('href').substring(1);
           const targetElement = document.getElementById(targetId);
           if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
           }
-          // Hide mobile menu
+          // Hide mobile menu if open
           document.getElementById('mobile-nav').classList.add('hidden');
         });
       });
