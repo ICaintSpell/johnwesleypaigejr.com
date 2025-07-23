@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I Remember Way Back When...."
-date: 2025-07-19 22:00
+date: 2025-07-19 22:00:00 -0400
 author: J.P.
 ---
 

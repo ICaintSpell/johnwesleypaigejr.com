@@ -61,6 +61,12 @@ nav a {
     transition: color 0.3s;
 }
 
+/* Focus style for nav links */
+nav a:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
 /* Mobile Navigation (Hidden by default) */
 nav {
     display: none;
@@ -105,7 +111,6 @@ nav a:hover {
     }
 }
 
-
 /* Mobile Menu Button ("Hamburger") */
 #mobile-menu-button {
     background: none;
@@ -126,6 +131,12 @@ nav a:hover {
     height: 3px;
     background-color: var(--color-heading);
     border-radius: 3px;
+}
+
+/* Focus style for mobile menu button */
+#mobile-menu-button:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 /* Main Content & Sections */
@@ -150,8 +161,26 @@ footer {
     text-align: center;
     padding: 3rem 1.5rem;
     margin-top: 3rem;
-    background-color: #fff;
+    background-color: #1f2937; /* Tailwind's gray-900 */
+    color: var(--color-bg);
     border-top: 1px solid var(--color-light-gray);
+}
+
+footer a {
+    color: var(--color-bg);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+/* Focus style for footer links */
+footer a:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 /* Blog Post Styling (for individual post pages) */
@@ -186,5 +215,4 @@ footer {
   white-space: pre-wrap;
   border: 1px solid #444;
 }
-
 
