@@ -25,7 +25,7 @@
 <body class="bg-coat-bg text-coat-text font-sans">
 
   <!-- NAVIGATION BAR -->
-  <header class="bg-coat-bg border-b border-coat-light-gray z-50">
+  <header class="bg-coat-bg border-b border-coat-light-gray z-35">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center space-x-4">
         <img src="/assets/img/coat-of-arms.png" alt="Family Coat of Arms" class="w-60 h-auto" />
@@ -38,14 +38,9 @@
         <a href="/#resume" class="hover:text-coat-accent font-medium">Resume</a>
         <a href="/#blog" class="hover:text-coat-accent font-medium">Blog</a>
         <a href="/#projects" class="hover:text-coat-accent font-medium">Projects</a>
-        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="hover:text-coat-accent font-medium">GitHub</a>
-        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="hover:text-coat-accent font-medium">LinkedIn</a>
+        
       </nav>
 
-      <!-- Mobile Menu Button (Visible on small screens) -->
-      <button id="mobile-menu-button" class="md:hidden focus:outline-none z-50" aria-label="Toggle menu">
-        <svg class="w-6 h-6 stroke-coat-heading" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-      </button>
     </div>
   </header>
 
@@ -55,8 +50,7 @@
     <a href="/#resume" class="block text-coat-text hover:text-coat-accent font-medium">Resume</a>
     <a href="/#blog" class="block text-coat-text hover:text-coat-accent font-medium">Blog</a>
     <a href="/#projects" class="block text-coat-text hover:text-coat-accent font-medium">Projects</a>
-    <a href="https://github.com/{{ site.github_username }}" target="_blank" class="block text-coat-text hover:text-coat-accent font-medium">GitHub</a>
-    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="block text-coat-text hover:text-coat-accent font-medium">LinkedIn</a>
+    
   </nav>
 
   <!-- MAIN CONTENT -->
@@ -65,10 +59,17 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-coat-bg text-center py-6 mt-12 border-t border-coat-light-gray text-coat-text">
-    <p class="text-sm">&copy; {% assign current_year = 'now' | date: '%Y' %}{{ current_year }} John Wesley Paige Jr.</p>
-    <p><a href="mailto:{{ site.email }}" class="hover:text-coat-accent underline">{{ site.email }}</a></p>
-  </footer>
+ <footer class="bg-coat-bg text-center py-6 mt-12 border-t border-coat-light-gray text-coat-text space-y-2">
+  <p class="text-sm">&copy; {{ 'now' | date: '%Y' }} John Wesley Paige Jr.</p>
+  <p>
+    <a href="mailto:{{ site.email }}" class="hover:text-coat-accent underline">{{ site.email }}</a>
+  </p>
+  <p>
+    <a href="https://github.com/ICaintSpell" target="_blank" rel="noopener noreferrer" class="hover:text-coat-accent underline mx-2">GitHub</a> |
+    <a href="https://www.linkedin.com/in/john-paige-jr-09149997/" target="_blank" rel="noopener noreferrer" class="hover:text-coat-accent underline mx-2">LinkedIn</a>
+  </p>
+</footer>
+
 
   <!-- SCRIPT: Mobile Menu Toggle + Smooth Scroll -->
   <script>
