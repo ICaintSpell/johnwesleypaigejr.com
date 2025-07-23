@@ -1,21 +1,25 @@
-// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,js,md}",
-    "./_layouts/*.html",
-    "./_includes/*.html",
-    "./_posts/*.md",
+    "./_layouts/**/*.html",
+    "./_includes/**/*.html",
+    "./*.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        'coat-black': '#1F1F1F',
-        'coat-gold': '#D4AF37',
-        'coat-pink': '#E8B5B7',
-        'coat-green': '#3B6E3B',
-        'coat-light-gray': '#D3D3D3',
-        'coat-white': '#F8F8F8',
-      }
+        coat: {
+          bg: "#f3f6fa", // soft pastel blue
+          text: "#2c2c2c",
+          heading: "#1a1a1a",
+          accent: "#748cab",
+          lightGray: "#d4d4d4",
+        },
+      },
+      backgroundImage: {
+        'pattern': "url('/pattern.svg')",
+      },
     },
   },
   plugins: [],
