@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title | default: site.title }}</title>
 
   <!-- Tailwind CSS CDN -->
@@ -10,20 +10,29 @@
 
   <!-- Your custom CSS -->
   <link rel="stylesheet" href="/assets/css/main.css" />
+  
+  <style>
+    /* Custom styles to complement Tailwind and handle menu state */
+    #main-nav {
+      transition: transform 0.3s ease-in-out;
+    }
+    #main-nav.is-open {
+      transform: translateX(0);
+    }
+  </style>
 </head>
 <body class="bg-coat-bg text-coat-text font-sans">
 
   <!-- NAVIGATION BAR -->
-  <header class="bg-coat-white border-b border-coat-light-gray z-90">
+  <header class="bg-coat-white border-b border-coat-light-gray sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center space-x-4">
-        <img src="/assets/img/coat-of-arms.png" alt="Family Coat of Arms" class="w-40 h-auto" />
-        <h1 class="text-2xl font-bold text-coat-heading">John Wesley Paige Jr.</h1>
+        <img src="/assets/img/coat-of-arms.png" alt="Family Coat of Arms" class="w-12 h-auto" />
+        <h1 class="text-xl font-bold text-coat-heading">John Wesley Paige Jr.</h1>
       </a>
-      <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Toggle menu">
-        <svg class="w-6 h-6 stroke-coat-heading" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-      </button>
-      <nav id="desktop-nav" class="hidden md:flex space-x-8 text-coat-text">
+      
+      <!-- Desktop Navigation (Visible on medium screens and up) -->
+      <nav class="hidden md:flex space-x-8 text-coat-text">
         <a href="/#about" class="hover:text-coat-accent font-medium">About</a>
         <a href="/#resume" class="hover:text-coat-accent font-medium">Resume</a>
         <a href="/#blog" class="hover:text-coat-accent font-medium">Blog</a>
@@ -31,18 +40,23 @@
         <a href="https://github.com/{{ site.github_username }}" target="_blank" class="hover:text-coat-accent font-medium">GitHub</a>
         <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="hover:text-coat-accent font-medium">LinkedIn</a>
       </nav>
-    </div>
 
-    <!-- MOBILE MENU -->
-    <nav id="mobile-nav" class="md:hidden hidden px-6 pb-4 space-y-3 bg-coat-bg border-b border-coat-light-gray">
-      <a href="/#about" class="block text-coat-text hover:text-coat-accent font-medium">About</a>
-      <a href="/#resume" class="block text-coat-text hover:text-coat-accent font-medium">Resume</a>
-      <a href="/#blog" class="block text-coat-text hover:text-coat-accent font-medium">Blog</a>
-      <a href="/#projects" class="block text-coat-text hover:text-coat-accent font-medium">Projects</a>
-      <a href="https://github.com/{{ site.github_username }}" target="_blank" class="block text-coat-text hover:text-coat-accent font-medium">GitHub</a>
-      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="block text-coat-text hover:text-coat-accent font-medium">LinkedIn</a>
-    </nav>
+      <!-- Mobile Menu Button (Visible on small screens) -->
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none z-50" aria-label="Toggle menu">
+        <svg class="w-6 h-6 stroke-coat-heading" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
   </header>
+
+  <!-- MOBILE MENU (Slides in from the side) -->
+  <nav id="main-nav" class="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full z-40 pt-20 p-6 space-y-4">
+    <a href="/#about" class="block text-coat-text hover:text-coat-accent font-medium">About</a>
+    <a href="/#resume" class="block text-coat-text hover:text-coat-accent font-medium">Resume</a>
+    <a href="/#blog" class="block text-coat-text hover:text-coat-accent font-medium">Blog</a>
+    <a href="/#projects" class="block text-coat-text hover:text-coat-accent font-medium">Projects</a>
+    <a href="https://github.com/{{ site.github_username }}" target="_blank" class="block text-coat-text hover:text-coat-accent font-medium">GitHub</a>
+    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="block text-coat-text hover:text-coat-accent font-medium">LinkedIn</a>
+  </nav>
 
   <!-- MAIN CONTENT -->
   <main class="pt-8 px-6 max-w-7xl mx-auto">
@@ -59,19 +73,35 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const menuBtn = document.getElementById('mobile-menu-button');
-      const mobileNav = document.getElementById('mobile-nav');
+      const mainNav = document.getElementById('main-nav');
 
-      menuBtn.addEventListener('click', () => {
-        mobileNav.classList.toggle('hidden');
+      // Toggle mobile menu visibility
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mainNav.classList.toggle('is-open');
       });
 
+      // Close menu if clicking outside of it
+      document.addEventListener('click', (e) => {
+        if (mainNav.classList.contains('is-open') && !mainNav.contains(e.target) && e.target !== menuBtn) {
+            mainNav.classList.remove('is-open');
+        }
+      });
+
+      // Handle smooth scrolling and close menu on link click
       document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
           e.preventDefault();
           const targetId = anchor.getAttribute('href').substring(2);
           const target = document.getElementById(targetId);
-          if (target) target.scrollIntoView({ behavior: 'smooth' });
-          if (!mobileNav.classList.contains('hidden')) mobileNav.classList.add('hidden');
+          
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+          
+          if (mainNav.classList.contains('is-open')) {
+            mainNav.classList.remove('is-open');
+          }
         });
       });
     });
