@@ -2,81 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title | default: site.title }}</title>
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your custom CSS -->
   <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-coat-bg text-coat-text font-sans">
 
   <!-- NAVIGATION BAR -->
-  <header class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="/" class="flex items-center space-x-3">
-        <img src="/assets/img/coat-of-arms.png" alt="Family Coat of Arms" class="w-10 h-10" onerror="this.style.display='none'">
-        <h1 class="text-xl font-bold text-yellow-400">John Wesley Paige Jr.</h1>
+  <header class="bg-coat-bg border-b border-coat-light-gray sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-4">
+        <img src="/assets/img/coat-of-arms.png" alt="Family Coat of Arms" class="w-20 h-auto" onerror="this.style.display='none'"/>
+        <h1 class="text-2xl font-bold text-coat-heading">John Wesley Paige Jr.</h1>
       </a>
-      <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-6 h-6 stroke-coat-heading" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
-      <nav id="main-nav" class="hidden md:flex space-x-6">
-        <a href="#about" class="hover:text-yellow-400">About</a>
-        <a href="#resume" class="hover:text-yellow-400">Resume</a>
-        <a href="#blog" class="hover:text-yellow-400">Blog</a>
-        <a href="#projects" class="hover:text-yellow-400">Projects</a>
-        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="hover:text-yellow-400">GitHub</a>
-        <a href="https://www.linkedin.com/in/john-paige-jr" target="_blank" class="hover:text-yellow-400">LinkedIn</a>
+      <nav id="desktop-nav" class="hidden md:flex space-x-8 text-coat-text">
+        <a href="/#about" class="hover:text-coat-accent font-medium">About</a>
+        <a href="/#resume" class="hover:text-coat-accent font-medium">Resume</a>
+        <a href="/#blog" class="hover:text-coat-accent font-medium">Blog</a>
+        <a href="/#projects" class="hover:text-coat-accent font-medium">Projects</a>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="hover:text-coat-accent font-medium">GitHub</a>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="hover:text-coat-accent font-medium">LinkedIn</a>
       </nav>
     </div>
 
     <!-- MOBILE MENU -->
-    <div id="mobile-nav" class="md:hidden hidden px-4 pb-4 space-y-2 bg-gray-800">
-      <a href="#about" class="block text-white hover:text-yellow-400">About</a>
-      <a href="#resume" class="block text-white hover:text-yellow-400">Resume</a>
-      <a href="#blog" class="block text-white hover:text-yellow-400">Blog</a>
-      <a href="#projects" class="block text-white hover:text-yellow-400">Projects</a>
-      <a href="https://github.com/{{ site.github_username }}" target="_blank" class="block text-white hover:text-yellow-400">GitHub</a>
-      <a href="https://www.linkedin.com/in/john-paige-jr" target="_blank" class="block text-white hover:text-yellow-400">LinkedIn</a>
-    </div>
+    <nav id="mobile-nav" class="md:hidden hidden px-6 pb-4 space-y-3 bg-coat-bg border-b border-coat-light-gray">
+      <a href="/#about" class="block text-coat-text hover:text-coat-accent font-medium">About</a>
+      <a href="/#resume" class="block text-coat-text hover:text-coat-accent font-medium">Resume</a>
+      <a href="/#blog" class="block text-coat-text hover:text-coat-accent font-medium">Blog</a>
+      <a href="/#projects" class="block text-coat-text hover:text-coat-accent font-medium">Projects</a>
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" class="block text-coat-text hover:text-coat-accent font-medium">GitHub</a>
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="block text-coat-text hover:text-coat-accent font-medium">LinkedIn</a>
+    </nav>
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="pt-6">
+  <main class="pt-8 px-6 max-w-7xl mx-auto">
     {{ content }}
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white text-center py-6 mt-12">
+  <footer class="bg-coat-bg text-center py-6 mt-12 border-t border-coat-light-gray text-coat-text">
     <p class="text-sm">&copy; {% assign current_year = 'now' | date: '%Y' %}{{ current_year }} John Wesley Paige Jr.</p>
-    <p><a href="mailto:{{ site.email }}" class="hover:text-yellow-400">{{ site.email }}</a></p>
+    <p><a href="mailto:{{ site.email }}" class="hover:text-coat-accent underline">{{ site.email }}</a></p>
   </footer>
 
-  <!-- SCRIPT: Smooth Scroll + Mobile Toggle -->
+  <!-- SCRIPT: Mobile Menu Toggle + Smooth Scroll -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Smooth scroll for in-page anchors
-      const scrollLinks = document.querySelectorAll('a[href^="#"]');
-      scrollLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-          }
-          // Hide mobile menu if open
-          document.getElementById('mobile-nav').classList.add('hidden');
-        });
-      });
-
-      // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
       const menuBtn = document.getElementById('mobile-menu-button');
       const mobileNav = document.getElementById('mobile-nav');
+      const desktopNav = document.getElementById('desktop-nav');
+
       menuBtn.addEventListener('click', () => {
         mobileNav.classList.toggle('hidden');
       });
+
+      document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = anchor.getAttribute('href').substring(2);
+          const target = document.getElementById(targetId);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+          if (!mobileNav.classList.contains('hidden')) mobileNav.classList.add('hidden');
+        });
+      });
     });
   </script>
-
 </body>
 </html>
