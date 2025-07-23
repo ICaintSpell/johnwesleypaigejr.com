@@ -1,15 +1,21 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  content: ["./index.html", "./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js,md}",
+    "./_layouts/*.html",
+    "./_includes/*.html",
+    "./_posts/*.md",
+  ],
   theme: {
     extend: {
       colors: {
-        coat: {
-          heading: '#1E40AF', // blue-800
-          text: '#374151',    // gray-700
-          accent: '#FBBF24',  // yellow-400
-        },
-      },
+        'coat-black': '#1F1F1F',
+        'coat-gold': '#D4AF37',
+        'coat-pink': '#E8B5B7',
+        'coat-green': '#3B6E3B',
+        'coat-light-gray': '#D3D3D3',
+        'coat-white': '#F8F8F8',
+      }
     },
   },
   plugins: [],
