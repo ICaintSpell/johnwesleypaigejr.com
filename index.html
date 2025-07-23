@@ -5,19 +5,19 @@ title: John Wesley Paige Jr. | Cybersecurity & Cloud
 
 <!-- ABOUT SECTION -->
 <section id="about" class="py-16 md:py-24 max-w-4xl mx-auto px-4">
-  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">About Me</h2>
-  <p class="text-lg text-gray-600 leading-relaxed mb-4">
+  <h2 class="text-4xl font-bold text-[#2E4636] mb-6 text-center">About Me</h2>
+  <p class="text-lg text-[#3D405B] leading-relaxed mb-4">
     Hello, I’m John Wesley Paige Jr.—a cybersecurity student, builder, and lifelong learner. You can call me J.P. for short. I’m developing a home lab from the ground up to deepen my skills in cybersecurity, cloud security, and networking. My setup includes pfSense for firewall and VPN access, a TrueNAS server for storage, Suricata as my IDS/IPS, and Splunk as a centralized SIEM. I’ve launched my own self-hosted website, integrated Active Directory with Windows Server, and am experimenting with hybrid cloud environments using AWS and Azure.
   </p>
-  <p class="text-lg text-gray-600 leading-relaxed">
+  <p class="text-lg text-[#3D405B] leading-relaxed">
     But beyond the tech, my mission is personal: I’m committed to bettering myself so I can uplift my family, community, and ultimately, my nation. I never thought I would be here. I have grown so much as a man, husband, father, son, brother and friend. I’m thankful for the progress I’ve made, but I will never let gratitude become complacency. I believe in staying hungry, staying humble, and always seeking to be greater, not for myself but for the ones that I love, my community and my country. So welcome and thanks for visiting, it means the world to me.
   </p>
 </section>
 
 <!-- PROJECTS SECTION -->
-<section id="projects" class="py-16 md:py-24 bg-white max-w-4xl mx-auto px-4">
-  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Projects</h2>
-  <ul class="text-lg text-gray-600 space-y-3 max-w-md mx-auto list-disc list-inside">
+<section id="projects" class="py-16 md:py-24 bg-[#FDFBF7] max-w-4xl mx-auto px-4">
+  <h2 class="text-4xl font-bold text-[#2E4636] mb-8 text-center">Projects</h2>
+  <ul class="text-lg text-[#3D405B] space-y-3 max-w-md mx-auto list-disc list-inside">
     <li>🔐 Home Lab with pfSense, Suricata, and Splunk</li>
     <li>☁️ Hybrid Network with Azure & On-Premises</li>
     <li>📦 Self-Hosted Website (you're looking at it!)</li>
@@ -25,9 +25,9 @@ title: John Wesley Paige Jr. | Cybersecurity & Cloud
 </section>
 
 <!-- RESUME SECTION -->
-<section id="resume" class="py-16 md:py-24 max-w-4xl mx-auto px-4">
-  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Professional Snapshot</h2>
-  <div class="grid md:grid-cols-2 gap-12 text-gray-700">
+<section id="resume" class="py-16 md:py-24 max-w-4xl mx-auto px-4 bg-[#FDFBF7]">
+  <h2 class="text-4xl font-bold text-[#2E4636] mb-8 text-center">Professional Snapshot</h2>
+  <div class="grid md:grid-cols-2 gap-12 text-[#3D405B]">
     <div>
       <h3 class="text-2xl font-semibold mb-4">Core Competencies</h3>
       <ul class="space-y-2 list-disc list-inside">
@@ -42,38 +42,38 @@ title: John Wesley Paige Jr. | Cybersecurity & Cloud
       <h3 class="text-2xl font-semibold mb-4">Recent Experience</h3>
       <div class="mb-6">
         <h4 class="text-xl font-bold">IT Support Specialist Co-op</h4>
-        <p class="text-md text-gray-500">Mubea | 2024 – Present</p>
+        <p class="text-md text-[#828282]">Mubea | 2024 – Present</p>
       </div>
       <div>
         <h4 class="text-xl font-bold">Cybersecurity Intern (Remote)</h4>
-        <p class="text-md text-gray-500">Roots of Unity – Gabon | 2024 – 2025</p>
+        <p class="text-md text-[#828282]">Roots of Unity – Gabon | 2024 – 2025</p>
       </div>
     </div>
   </div>
   <div class="text-center mt-10">
-    <a href="/assets/John-Paige-Resume.pdf" target="_blank" class="bg-yellow-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-yellow-600 transition-colors">
+    <a href="/assets/John-Paige-Resume.pdf" target="_blank" class="bg-[#D5A021] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#b78b1a] transition-colors">
       View Full Resume (PDF)
     </a>
   </div>
 </section>
 
 <!-- BLOG POSTS SECTION -->
-<section id="blog" class="py-16 md:py-24 max-w-6xl mx-auto px-4">
-  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">From The Blog</h2>
+<section id="blog" class="py-16 md:py-24 max-w-6xl mx-auto px-4 bg-[#FDFBF7]">
+  <h2 class="text-4xl font-bold text-[#2E4636] mb-12 text-center">From The Blog</h2>
   <div class="grid md:grid-cols-3 gap-8">
     {% if site.posts and site.posts.size > 0 %}
       {% for post in site.posts limit:3 %}
         <article class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-          <p class="text-sm text-gray-500 mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">
-            <a href="{{ post.url | relative_url }}" class="hover:text-yellow-600">{{ post.title }}</a>
+          <p class="text-sm text-[#828282] mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
+          <h3 class="text-xl font-bold text-[#2E4636] mb-3">
+            <a href="{{ post.url | relative_url }}" class="hover:text-[#D5A021]">{{ post.title }}</a>
           </h3>
-          <p class="text-gray-600 mb-4">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-          <a href="{{ post.url | relative_url }}" class="font-semibold text-green-700 hover:text-green-800">Read More →</a>
+          <p class="text-[#3D405B] mb-4">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          <a href="{{ post.url | relative_url }}" class="font-semibold text-[#2E4636] hover:text-[#D5A021]">Read More →</a>
         </article>
       {% endfor %}
     {% else %}
-      <p class="text-center text-gray-600 col-span-3">No blog posts found.</p>
+      <p class="text-center text-[#828282] col-span-3">No blog posts found.</p>
     {% endif %}
   </div>
 </section>

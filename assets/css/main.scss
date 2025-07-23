@@ -1,5 +1,3 @@
----
----
 /* assets/css/main.scss */
 
 /* "Coat of Arms" Color Palette */
@@ -13,131 +11,200 @@
 
 /* Base Styles */
 body {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    line-height: 1.7;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
 }
 
 /* Header & Navigation */
 header {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--color-light-gray);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+  background-color: var(--color-bg); /* Bright background */
+  border-bottom: 1px solid var(--color-light-gray);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .header-brand {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
 }
 
 .header-crest {
-    width: 50px;
-    height: auto;
+  width: 80px; /* Larger coat of arms */
+  height: auto;
 }
 
 .header-brand h1 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: var(--color-heading);
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--color-heading);
 }
 
 /* Desktop Navigation */
 @media (min-width: 768px) {
-    nav {
-        display: flex;
-        align-items: center;
-    }
+  nav {
+    display: flex;
+    align-items: center;
+  }
 }
 
 nav a {
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-/* Focus style for nav links */
-nav a:focus {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color 0.3s;
 }
 
 /* Mobile Navigation (Hidden by default) */
 nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    border-bottom: 1px solid var(--color-light-gray);
-    padding: 0.5rem 0;
-    z-index: 10;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-light-gray);
+  padding: 0.5rem 0;
+  z-index: 10;
 }
 
 nav.is-open {
-    display: flex; /* This makes the mobile menu appear */
+  display: flex; /* Mobile menu visible */
 }
 
 nav a {
-    padding: 1rem 1.5rem;
-    text-align: center;
-    border-bottom: 1px solid #f0f0f0;
-    color: var(--color-text);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
 }
+
 nav a:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
+
 nav a:hover {
-    background-color: #f7f7f7;
-    color: var(--color-accent);
+  background-color: #f7f7f7;
+  color: var(--color-accent);
 }
 
 /* Desktop-specific link styles */
 @media (min-width: 768px) {
-    nav a {
-        padding: 0;
-        border-bottom: none;
-        margin-left: 2rem;
-    }
-    nav a:hover {
-        background-color: transparent;
-    }
+  nav a {
+    padding: 0;
+    border-bottom: none;
+    margin-left: 2rem;
+  }
+  nav a:hover {
+    background-color: transparent;
+  }
 }
 
 /* Mobile Menu Button ("Hamburger") */
 #mobile-menu-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 @media (min-width: 768px) {
-    #mobile-menu-button {
-        display: none;
-    }
+  #mobile-menu-button {
+    display: none;
+  }
 }
 #mobile-menu-button .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-heading);
-    border-radius: 3px;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-heading);
+  border-radius: 3px;
 }
 
-/* Focus style for mobile menu button */
-#mobile-menu-button:focus {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
+/* Main Content & Sections */
+main {
+  padding: 0 1.5rem;
 }
+
+section {
+  padding: 4rem 0;
+  background-color: var(--color-bg);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section h2 {
+  color: var(--color-heading);
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-top: 3rem;
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-light-gray);
+}
+
+footer a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+footer a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* Blog Post Styling (for individual post pages) */
+.post {
+  max-width: 800px;
+  margin: 4rem auto;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #828282;
+  font-style: italic;
+}
+
+.post-content {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.post-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-heading);
+  margin-top: 2rem;
+}
+
+.post-content code,
+.post-content pre {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  border: 1px solid #444;
+}
+
 
 /* Main Content & Sections */
 main {
