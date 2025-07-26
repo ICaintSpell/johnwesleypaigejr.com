@@ -1,5 +1,3 @@
-# _config.yml
-
 title: John Wesley Paige Jr. | Portfolio
 email: John.Paige@johnwesleypaigejr.com
 description: >-
@@ -14,6 +12,10 @@ linkedin_username: john-paige-jr-09149997
 theme: minima
 plugins:
   - jekyll-feed
+
+# Include the admin folder for Netlify CMS
+include:
+  - admin
 
 # Exclude these files/folders from processing
 exclude:
