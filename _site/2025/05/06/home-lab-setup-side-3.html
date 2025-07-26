@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Lab Setup - Side 3</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  
+  <style>
+  #main-nav {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); /* Add this line to hide the menu initially */
+  }
+
+  #main-nav.is-open {
+    transform: translateX(0);
+  }
+</style>
+</head>
+<body class="bg-coat-bg text-coat-text font-sans">
+
+  <!-- NAVIGATION BAR -->
+<header class="bg-coat-bg border-b border-coat-light-gray z-35">
+  <div class="container mx-auto px-6 py-4 flex justify-center items-center">
+    <a href="/" class="flex flex-col items-center space-y-2">
+      <img src="/assets/img/coat-of-arms.png" alt="Family Coat of Arms" class="w-60 h-auto" />
+      <h1 class="text-xl font-bold text-coat-heading text-center">John Wesley Paige Jr.</h1>
+    </a>
+
+      
+      <!-- Desktop Navigation (Visible on medium screens and up) -->
+      <nav class="hidden md:flex space-x-8 text-coat-text">
+        <a href="/#about" class="hover:text-coat-accent font-medium">About</a>
+        <a href="/#resume" class="hover:text-coat-accent font-medium">Resume</a>
+        <a href="/#blog" class="hover:text-coat-accent font-medium">Blog</a>
+        <a href="/#projects" class="hover:text-coat-accent font-medium">Projects</a>
+        
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MOBILE MENU (Slides in from the side) -->
+  <nav id="main-nav" class="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full z-40 pt-20 p-6 space-y-4">
+    <a href="/#about" class="block text-coat-text hover:text-coat-accent font-medium">About</a>
+    <a href="/#resume" class="block text-coat-text hover:text-coat-accent font-medium">Resume</a>
+    <a href="/#blog" class="block text-coat-text hover:text-coat-accent font-medium">Blog</a>
+    <a href="/#projects" class="block text-coat-text hover:text-coat-accent font-medium">Projects</a>
+    
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="pt-8 px-6 max-w-7xl mx-auto">
+    <article class="post max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md my-12">
+  <h1 class="text-3xl font-bold mb-4">Home Lab Setup - Side 3</h1>
+  <p class="post-meta text-gray-600 italic mb-6">
+    <time datetime="2025-05-06T15:30:00-04:00">
+      May 06, 2025
+    </time> &nbsp;|&nbsp; J.P.
+  </p>
+
+  <div class="post-content prose max-w-none">
+    <p>I am a HUGE Gundam nerd All of my devices are themed based on vehicles, equipment or vessels from the ‘Universal Century’ time line. And so I saw it fitting that for my network the name should follow that same schema. So…. WELCOME TO SIDE 3!!! IYKTYK</p>
+
+<p>Today I configured pfSense and started experimenting with Suricata. It’s wild how much you can learn from hands-on work.</p>
+
+<p>Having a physical firewall and IDS/IPS running in my own environment is a game-changer for understanding network defense concepts. Next up: getting all the logs piped into Splunk correctly.</p>
+
+  </div>
+</article>
+
+<hr class="my-12">
+
+<section id="comments" class="max-w-3xl mx-auto">
+  <h2 class="text-2xl font-semibold mb-4">Comments</h2>
+  <script src="https://giscus.app/client.js"
+        data-repo="ICaintSpell/johnwesleypaigejr.com"
+        data-repo-id="R_kgDOPMDrpA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPMDrpM4Cs8Ac"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+  </script>
+</section>
+
+  </main>
+
+  <!-- FOOTER -->
+ <footer class="bg-coat-bg text-center py-6 mt-12 border-t border-coat-light-gray text-coat-text space-y-2">
+  <p class="text-sm">&copy; 2025 John Wesley Paige Jr.</p>
+  <p>
+    <a href="mailto:John.Paige@johnwesleypaigejr.com" class="hover:text-coat-accent underline">John.Paige@johnwesleypaigejr.com</a>
+  </p>
+  <p>
+    <a href="https://github.com/ICaintSpell" target="_blank" rel="noopener noreferrer" class="hover:text-coat-accent underline mx-2">GitHub</a> |
+    <a href="https://www.linkedin.com/in/john-paige-jr-09149997/" target="_blank" rel="noopener noreferrer" class="hover:text-coat-accent underline mx-2">LinkedIn</a>
+  </p>
+</footer>
+
+
+  <!-- SCRIPT: Mobile Menu Toggle + Smooth Scroll -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('mobile-menu-button');
+      const mainNav = document.getElementById('main-nav');
+
+      // Toggle mobile menu visibility
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mainNav.classList.toggle('is-open');
+      });
+
+      // Close menu if clicking outside of it
+      document.addEventListener('click', (e) => {
+        if (mainNav.classList.contains('is-open') && !mainNav.contains(e.target) && e.target !== menuBtn) {
+            mainNav.classList.remove('is-open');
+        }
+      });
+
+      // Handle smooth scrolling and close menu on link click
+      document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = anchor.getAttribute('href').substring(2);
+          const target = document.getElementById(targetId);
+          
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+          
+          if (mainNav.classList.contains('is-open')) {
+            mainNav.classList.remove('is-open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

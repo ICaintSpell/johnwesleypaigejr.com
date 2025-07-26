@@ -1,164 +1,208 @@
-@charset "UTF-8";
 /* assets/css/main.scss */
+/* "Coat of Arms" Color Palette */
 :root {
-  --color-dark: #121212;
-  --color-grey: #a9a9a9;
-  --color-gold: #FFD700;
-  --color-pink: #FF69B4;
-  --color-light: #FFFFFF;
-  --color-bg-alt: #222;
+  --color-bg: #FDFBF7;
+  --color-text: #3D405B;
+  --color-heading: #2E4636;
+  --color-accent: #D5A021;
+  --color-light-gray: #E0E0E0;
+  --color-pattern-green: rgba(46, 70, 54, 0.04);
+  --color-pattern-pink: rgba(216, 160, 166, 0.04);
+  --color-pattern-teal: rgba(140, 200, 190, 0.04);
 }
 
+/* Base Styles with New Background Pattern */
 body {
-  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--color-dark);
-  color: var(--color-grey);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  background-color: var(--color-bg);
+  background-image: radial-gradient(circle, var(--color-pattern-pink) 2px, transparent 3px), radial-gradient(circle, var(--color-pattern-teal) 2px, transparent 3px), radial-gradient(circle, var(--color-pattern-green) 2px, transparent 3px);
+  background-position: 0 0, 30px 30px, 60px 60px;
+  background-size: 90px 90px;
 }
 
+/* Header & Navigation */
 header {
-  background: var(--color-bg-alt);
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 3px solid var(--color-gold);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  color: var(--color-gold);
-}
-
-header p {
-  margin-top: 0.5rem;
-  color: var(--color-grey);
-  font-style: italic;
-}
-
-nav {
-  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-light-gray);
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: var(--color-bg);
 }
 
-nav a {
-  color: var(--color-light);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--color-pink);
-}
-
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-}
-
-h2, h3 {
-  color: var(--color-gold);
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
-}
-
-a {
-  color: var(--color-pink);
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  list-style-type: "➤ ";
-  padding-left: 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: var(--color-bg-alt);
-  margin-top: 3rem;
-  border-top: 1px solid #333;
-}
-
-/* Header Crest Image */
 .header-crest {
-  display: block;
-  margin: 0 auto 20px;
-  width: 100px;
+  width: 50px;
   height: auto;
 }
 
-/* Blog Post Styling */
-.post-list h3 a {
-  color: var(--color-gold);
+.header-brand h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-heading);
 }
 
-.post-list li {
-  margin-bottom: 2rem;
+/* Desktop Navigation */
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+  }
+}
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Mobile Navigation */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid var(--color-light-gray);
+  padding: 0.5rem 0;
+  z-index: 10;
+}
+
+nav.is-open {
+  display: flex;
+}
+
+nav a {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--color-text);
+}
+
+nav a:last-child {
+  border-bottom: none;
+}
+
+nav a:hover {
+  background-color: #f7f7f7;
+  color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+  nav a {
+    padding: 0;
+    border-bottom: none;
+    margin-left: 2rem;
+  }
+  nav a:hover {
+    background-color: transparent;
+  }
+}
+/* Mobile Menu Button ("Hamburger") */
+#mobile-menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (min-width: 768px) {
+  #mobile-menu-button {
+    display: none;
+  }
+}
+#mobile-menu-button .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-heading);
+  border-radius: 3px;
+}
+
+/* Main Content & Sections */
+main {
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  color: var(--color-heading);
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-top: 3rem;
+  background-color: #fff;
+  border-top: 1px solid var(--color-light-gray);
+}
+
+/* Blog Post Styling */
+.post {
+  max-width: 800px;
+  margin: 4rem auto;
 }
 
 .post-meta {
   font-size: 0.9rem;
-  color: var(--color-grey);
+  color: #828282;
   font-style: italic;
 }
 
 .post-content {
   margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-/* Resume Page Styling */
-.resume-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--color-pink);
-  color: var(--color-light);
-  border-radius: 5px;
+.post-content h3 {
+  font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  color: var(--color-heading);
+  margin-top: 2rem;
 }
 
-.cta-button:hover {
-  background-color: #d84a96;
-  text-decoration: none;
+/* Code Styling (Merged) */
+.post-content code,
+.post-content pre,
+code,
+pre {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  font-family: "Courier New", Courier, monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  border: 1px solid #444;
 }
 
-.resume-container section {
-  margin-bottom: 2rem;
+/* Scrollbar Customization for Code Blocks */
+pre::-webkit-scrollbar {
+  height: 6px;
 }
 
-.job {
-  margin-top: 1rem;
-}
-
-.job h4 {
-  margin-bottom: 0.25rem;
-  color: var(--color-light);
-}
-
-.job p {
-  margin: 0;
-  font-style: italic;
+pre::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 3px;
 }
 
 /*# sourceMappingURL=main.css.map */

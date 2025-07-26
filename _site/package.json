@@ -1,0 +1,15 @@
+{
+  "name": "my-tailwind-project",
+  "version": "1.0.0",
+  "description": "A simple Tailwind CSS project",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "author": "John Wesley Paige Jr",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

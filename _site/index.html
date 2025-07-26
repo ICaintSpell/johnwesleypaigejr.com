@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  
+  <style>
+  #main-nav {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); /* Add this line to hide the menu initially */
+  }
+
+  #main-nav.is-open {
+    transform: translateX(0);
+  }
+</style>
+</head>
+<body class="bg-coat-bg text-coat-text font-sans">
+
+  <!-- NAVIGATION BAR -->
+<header class="bg-coat-bg border-b border-coat-light-gray z-35">
+  <div class="container mx-auto px-6 py-4 flex justify-center items-center">
+    <a href="/" class="flex flex-col items-center space-y-2">
+      <img src="/assets/img/coat-of-arms.png" alt="Family Coat of Arms" class="w-60 h-auto" />
+      <h1 class="text-xl font-bold text-coat-heading text-center">John Wesley Paige Jr.</h1>
+    </a>
+
+      
+      <!-- Desktop Navigation (Visible on medium screens and up) -->
+      <nav class="hidden md:flex space-x-8 text-coat-text">
+        <a href="/#about" class="hover:text-coat-accent font-medium">About</a>
+        <a href="/#resume" class="hover:text-coat-accent font-medium">Resume</a>
+        <a href="/#blog" class="hover:text-coat-accent font-medium">Blog</a>
+        <a href="/#projects" class="hover:text-coat-accent font-medium">Projects</a>
+        
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MOBILE MENU (Slides in from the side) -->
+  <nav id="main-nav" class="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full z-40 pt-20 p-6 space-y-4">
+    <a href="/#about" class="block text-coat-text hover:text-coat-accent font-medium">About</a>
+    <a href="/#resume" class="block text-coat-text hover:text-coat-accent font-medium">Resume</a>
+    <a href="/#blog" class="block text-coat-text hover:text-coat-accent font-medium">Blog</a>
+    <a href="/#projects" class="block text-coat-text hover:text-coat-accent font-medium">Projects</a>
+    
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="pt-8 px-6 max-w-7xl mx-auto">
+    <section id="about" class="mb-24 max-w-3xl mx-auto text-center">
+  <h2 class="text-4xl font-extrabold text-coat-heading mb-6">About Me</h2>
+  <p class="text-lg text-coat-text leading-relaxed mb-4">
+    Hello, I’m John Wesley Paige Jr.—a cybersecurity student, builder, and lifelong learner. You can call me J.P. for short. I’m developing a home lab from the ground up to deepen my skills in cybersecurity, cloud security, and networking. My setup includes pfSense for firewall and VPN access, a TrueNAS server for storage, Suricata as my IDS/IPS, and Splunk as a centralized SIEM. I’ve launched my own self-hosted website, integrated Active Directory with Windows Server, and am experimenting with hybrid cloud environments using AWS and Azure.
+  </p>
+  <p class="text-lg text-coat-text leading-relaxed">
+    But beyond the tech, my mission is personal: I’m committed to bettering myself so I can uplift my family, community, and ultimately, my nation. I never thought I would be here. I have grown so much as a man, husband, father, son, brother and friend. I’m thankful for the progress I’ve made, but I will never let gratitude become complacency. I believe in staying hungry, humble, and always seeking to be greater, not for myself but for the ones that I love, my community and my country. So welcome and thanks for visiting, it means the world to me.
+  </p>
+</section>
+
+<section id="resume" class="mb-24 max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+  <h2 class="text-4xl font-extrabold text-coat-heading mb-8 text-center">Professional Snapshot</h2>
+  <div class="grid md:grid-cols-2 gap-10 text-coat-text">
+    <div>
+      <h3 class="text-2xl font-semibold mb-4">Core Competencies</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Firewall/IDS/IPS: pfSense, Suricata</li>
+        <li>SIEM & Logging: Splunk</li>
+        <li>Systems Admin: Active Directory, Group Policy</li>
+        <li>Cloud Platforms: Microsoft Azure, AWS</li>
+        <li>Networking: TCP/IP, DNS, DHCP, Wireshark</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-2xl font-semibold mb-4">Recent Experience</h3>
+      <div class="mb-6">
+        <h4 class="text-xl font-bold">Information Technology Co-op</h4>
+        <p class="text-gray-600">Mubea | 2024 – Present</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold">Cybersecurity Intern (Remote)</h4>
+        <p class="text-gray-600">Roots of Unity – Gabon | 2024 – 2025</p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-12">
+    <a href="/assets/John-Paige-Resume.pdf" target="_blank" class="inline-block bg-coat-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-yellow-600 transition-colors">
+      View Full Resume (PDF)
+    </a>
+  </div>
+</section>
+
+<section id="blog" class="mb-24 max-w-6xl mx-auto">
+  <h2 class="text-4xl font-extrabold text-coat-heading mb-12 text-center">From The Blog</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    
+      <article class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow text-coat-text">
+        <time class="block text-sm text-gray-500 mb-2" datetime="2025-07-23T12:19:00-04:00">
+          July 23, 2025
+        </time>
+        <h3 class="text-xl font-bold mb-3">
+          <a href="/2025/07/23/Never-Thought-It-Would-Be-Like-This.html" class="hover:text-coat-accent">Never Thought It Would Be Like This</a>
+        </h3>
+        <p class="mb-4">Last night and this morning I have been doing a COMPLETE revamp of my site, and I’ll say this; I...</p>
+        <a href="/2025/07/23/Never-Thought-It-Would-Be-Like-This.html" class="font-semibold text-green-700 hover:text-green-800">Read More →</a>
+      </article>
+    
+      <article class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow text-coat-text">
+        <time class="block text-sm text-gray-500 mb-2" datetime="2025-07-22T10:07:00-04:00">
+          July 22, 2025
+        </time>
+        <h3 class="text-xl font-bold mb-3">
+          <a href="/2025/07/22/Sometimes-I-Think-Too-Much.html" class="hover:text-coat-accent">Sometimes I Think Too Much</a>
+        </h3>
+        <p class="mb-4">So… I’m sitting here listening to music finishing up term #4 of my college career and my thoughts wonder. I...</p>
+        <a href="/2025/07/22/Sometimes-I-Think-Too-Much.html" class="font-semibold text-green-700 hover:text-green-800">Read More →</a>
+      </article>
+    
+      <article class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow text-coat-text">
+        <time class="block text-sm text-gray-500 mb-2" datetime="2025-07-19T22:00:00-04:00">
+          July 19, 2025
+        </time>
+        <h3 class="text-xl font-bold mb-3">
+          <a href="/2025/07/19/I-Remember-way-back-when.html" class="hover:text-coat-accent">I Remember Way Back When....</a>
+        </h3>
+        <p class="mb-4">Sitting here finishing up the last little bit of my Discrete Mathematics homework and I got to thinking about where...</p>
+        <a href="/2025/07/19/I-Remember-way-back-when.html" class="font-semibold text-green-700 hover:text-green-800">Read More →</a>
+      </article>
+    
+  </div>
+</section>
+
+<section id="projects" class="mb-24 max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 text-coat-text text-left">
+  <h2 class="text-4xl font-extrabold text-coat-heading mb-8 text-center">Projects</h2>
+  <ul class="list-disc list-inside text-lg space-y-3">
+    <li>🔐 Home Lab w/ pfSense, Suricata, and Splunk</li>
+    <li>☁️ Hybrid Network w/ Azure & On-Prem</li>
+    <li>📦 Self-Hosted Website (you're lookin at it!)</li>
+  </ul>
+</section>
+
+  </main>
+
+  <!-- FOOTER -->
+ <footer class="bg-coat-bg text-center py-6 mt-12 border-t border-coat-light-gray text-coat-text space-y-2">
+  <p class="text-sm">&copy; 2025 John Wesley Paige Jr.</p>
+  <p>
+    <a href="mailto:John.Paige@johnwesleypaigejr.com" class="hover:text-coat-accent underline">John.Paige@johnwesleypaigejr.com</a>
+  </p>
+  <p>
+    <a href="https://github.com/ICaintSpell" target="_blank" rel="noopener noreferrer" class="hover:text-coat-accent underline mx-2">GitHub</a> |
+    <a href="https://www.linkedin.com/in/john-paige-jr-09149997/" target="_blank" rel="noopener noreferrer" class="hover:text-coat-accent underline mx-2">LinkedIn</a>
+  </p>
+</footer>
+
+
+  <!-- SCRIPT: Mobile Menu Toggle + Smooth Scroll -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('mobile-menu-button');
+      const mainNav = document.getElementById('main-nav');
+
+      // Toggle mobile menu visibility
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mainNav.classList.toggle('is-open');
+      });
+
+      // Close menu if clicking outside of it
+      document.addEventListener('click', (e) => {
+        if (mainNav.classList.contains('is-open') && !mainNav.contains(e.target) && e.target !== menuBtn) {
+            mainNav.classList.remove('is-open');
+        }
+      });
+
+      // Handle smooth scrolling and close menu on link click
+      document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = anchor.getAttribute('href').substring(2);
+          const target = document.getElementById(targetId);
+          
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+          
+          if (mainNav.classList.contains('is-open')) {
+            mainNav.classList.remove('is-open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

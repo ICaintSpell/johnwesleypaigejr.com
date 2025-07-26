@@ -1,19 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-14T00:38:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">John Wesley Paige Jr. | Portfolio</title><subtitle>The professional portfolio and blog for John Wesley Paige Jr., a cybersecurity  and cloud professional.</subtitle><entry><title type="html">The Day the Lab Became Real: Investigating My First Real Threat</title><link href="http://localhost:4000/2025/07/12/the-day-the-lab-became-real.html" rel="alternate" type="text/html" title="The Day the Lab Became Real: Investigating My First Real Threat" /><published>2025-07-12T18:00:00-04:00</published><updated>2025-07-12T18:00:00-04:00</updated><id>http://localhost:4000/2025/07/12/the-day-the-lab-became-real</id><content type="html" xml:base="http://localhost:4000/2025/07/12/the-day-the-lab-became-real.html"><![CDATA[<p>About three weeks ago, I discovered something that made my stomach drop.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://johnwesleypaigejr.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://johnwesleypaigejr.com/" rel="alternate" type="text/html" /><updated>2025-07-26T11:25:35-04:00</updated><id>https://johnwesleypaigejr.com/feed.xml</id><title type="html">John Wesley Paige Jr. | Portfolio</title><subtitle>The professional portfolio and blog for John Wesley Paige Jr., a cybersecurity  and cloud professional.</subtitle><entry><title type="html">Never Thought It Would Be Like This</title><link href="https://johnwesleypaigejr.com/2025/07/23/Never-Thought-It-Would-Be-Like-This.html" rel="alternate" type="text/html" title="Never Thought It Would Be Like This" /><published>2025-07-23T12:19:00-04:00</published><updated>2025-07-23T12:19:00-04:00</updated><id>https://johnwesleypaigejr.com/2025/07/23/Never-Thought-It-Would-Be-Like-This</id><content type="html" xml:base="https://johnwesleypaigejr.com/2025/07/23/Never-Thought-It-Would-Be-Like-This.html"><![CDATA[<p>Last night and this morning I have been doing a COMPLETE revamp of my site, and I’ll say this; I do not code, I do not like coding and God bless althose who do…</p>
 
-<p>Buried deep in my pfSense ruleset, a leftover from early troubleshooting, was a rule that said: <code class="language-plaintext highlighter-rouge">Allow All Traffic (LAN -&gt; Any)</code>. I had left the digital front door wide open while I was setting things up.</p>
+<p>I really fell down the rabbit hole on this one and I’m just glad I’m done.</p>
+
+<p>Now the question is what direction do I go in now, do I work on EDR/AV OR do I start learning and implementing Splunk? I have a week off until the new quarter starts, and so I have some free time. Decisions decisions…</p>]]></content><author><name>J.P.</name></author><summary type="html"><![CDATA[Last night and this morning I have been doing a COMPLETE revamp of my site, and I’ll say this; I do not code, I do not like coding and God bless althose who do…]]></summary></entry><entry><title type="html">Sometimes I Think Too Much</title><link href="https://johnwesleypaigejr.com/2025/07/22/Sometimes-I-Think-Too-Much.html" rel="alternate" type="text/html" title="Sometimes I Think Too Much" /><published>2025-07-22T10:07:00-04:00</published><updated>2025-07-22T10:07:00-04:00</updated><id>https://johnwesleypaigejr.com/2025/07/22/Sometimes-I-Think-Too-Much</id><content type="html" xml:base="https://johnwesleypaigejr.com/2025/07/22/Sometimes-I-Think-Too-Much.html"><![CDATA[<p>So… I’m sitting here listening to music finishing up term #4 of my college career and my thoughts wonder. I started thinking about where I would like to go professionally. Exactly what direction I would like my career to go in, and the more I think, the more I come to the realization that I’m not really sure. There are so many things I do not understand, and I feel like without the full understanding of things unknown, how could I ever pick a direction. I hear “you have to find a niche”, to “pick a lane”, I guess I have analysis paralysis. Maybe I’m putting too much thought into it all and I just need to chill out…. Who knows…. There is 2 things I have been advised about when it comes to moving forward; and those 2 things are CloudSec and learning Splunk. So I reckon with that being said, I think I will go and try to find a Cybersecurity road map of sorts to see what my options are when it comes to those two things….</p>
+
+<p>John W Paige Jr.</p>]]></content><author><name>J.P.</name></author><summary type="html"><![CDATA[So… I’m sitting here listening to music finishing up term #4 of my college career and my thoughts wonder. I started thinking about where I would like to go professionally. Exactly what direction I would like my career to go in, and the more I think, the more I come to the realization that I’m not really sure. There are so many things I do not understand, and I feel like without the full understanding of things unknown, how could I ever pick a direction. I hear “you have to find a niche”, to “pick a lane”, I guess I have analysis paralysis. Maybe I’m putting too much thought into it all and I just need to chill out…. Who knows…. There is 2 things I have been advised about when it comes to moving forward; and those 2 things are CloudSec and learning Splunk. So I reckon with that being said, I think I will go and try to find a Cybersecurity road map of sorts to see what my options are when it comes to those two things….]]></summary></entry><entry><title type="html">I Remember Way Back When….</title><link href="https://johnwesleypaigejr.com/2025/07/19/I-Remember-way-back-when.html" rel="alternate" type="text/html" title="I Remember Way Back When…." /><published>2025-07-19T22:00:00-04:00</published><updated>2025-07-19T22:00:00-04:00</updated><id>https://johnwesleypaigejr.com/2025/07/19/I-Remember-way-back-when</id><content type="html" xml:base="https://johnwesleypaigejr.com/2025/07/19/I-Remember-way-back-when.html"><![CDATA[<p>Sitting here finishing up the last little bit of my Discrete Mathematics homework and I got to thinking about where I’ve come from. I went thru struggles and many-a-night up until 0200 trying to fix what I have broken. And so it reminded me of a write-up I made back in April on the 9th. 
+This one here:</p>
+
+<p>PFSense version 2.7.0. on bare metal Jetway Mini PC HBFBZ10-6412-B</p>
+
+<p>Attempted install of OpenVPN onto PFSense. For whatever reason while configuring OpenVPN all went well until it came time to import packages. DNS servers were assigned properly, CA certificates were created successfully but when it came time to import packages and configure OpenVPN I discovered package files were missing. Only solution was to update PFSense to version 2.7.2. I then exported my current configuration to import once I updated PFSense. I attempted the update and update failed repeatedly. Decided to reimage my Jetway using a 32GB USB stick. Attempted to reimage PC with USB boot loaded with PFSense 2.7.2.. Install was successful. Web interface functioned properly from start. (I mention this because upon first install I had issues with PFSense communicating with Netgate servers and then after that with an offline Web GUI) Only after importing configuration, renaming port identities and “improving” the firewall rules did I lost internet connection and connection to the web GUI. At that point I SSH’d in using Putty and restarted the web interface, to no avail. 192.168.2.1 was still no longer assessable. At that point I began my diagnostics.</p>
+
+<p>I then….</p>
+<ol>
+  <li>Checked the assigned IP on the LAN (Server) interface, assigned IP was correct.</li>
+  <li>Ensured I was connected to the right network, I was.</li>
+  <li>Checked firewall settings, everything appeared fine.</li>
+  <li>Confirmed Web GUI was listening, it was not.
+I then attempted to reconnect to 192.168.2.1 in Google Chrome and after failing to connect again, I ran Windows troubleshooter and found that “resource 192.168.2.1 is online but it is not responding to connection attempts.”</li>
+</ol>
+
+<p>I then…..</p>
+
+<p>Tried using HTTP versus HTTPS, still the problem persisted.
+Attempted a restart of the web GUI from the shell (/etc/rc.restart_webgui), received no response.
+Checked what port Lighttpd (sockstat -l | grep lighttpd) was listening on, lighttpd file was missing.
+Tested if web GUI was accessible from inside PFSense itself with curl (curl -vk https://127.0.0.1/), It was not.
+From there I proceeded to…</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Check for web GUI errors (clog /var/log/system.log</td>
+      <td>grep lighttpd, cat /var/log/system.log</td>
+      <td>grep lighttpd, cat /var/log/messages</td>
+      <td>grep lighttpd), Command was not found.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Tried assessing the GUI from other devices in hope it was a cache issue on my Server machine, no avail.
+This is when I found that lighttpd was not even installed in PFSense, then what I did next was….</p>
+
+<p>Using ipconfig verified again what the current LAN IP was, and it was still 192.168.2.1.</p>
+
+<p>Restarted the GUI again, nothing.</p>
+
+<p>Ran restart webConfiguerator (option 11) in the console, still nothing.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Checked to see if GUI was listening on port 443 (sockstat -4</td>
+      <td>grep :443, root lighttpd … 192.168.2.1:443, /usr/local/sbin/lighttpd -f /var/etc/lighty-webConfigurator.conf), at that point was given command not found on command /usr/local/sbin/lighttpd -f /var/etc/lighty-webConfigurator.conf.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>From here I decided to</p>
+
+<p>Verify I had installed the correct version, version was found to be correct (2.7.2)
+Restart all services (/etc/rc.restart_all)
+After reboot I then attempted to….</p>
+
+<p>Reinstalling the GUI package (pkg install -f PFSense-pkg-webgui)
+And ping 192.168.2.1, all packets were dropped
+Reassign WAN and LAN interfaces and recheck the LAN IP address, was still found to be 192.168.2.1.
+Retried from another device, still nothing.
+After this I still had no web GUI or internet connection.
+So I….</p>
+
+<p>Checked if the GUI was running (pfctl -sr), it was not.
+Then restarting the webConfigurator (/etc/rc.restart_webgui), no avail yet again.
+Then ran /etc/rc.reload_all.
+Set static IP on LAN again.
+At this point I have decided to reset to factory settings. After returning PFSense to factory default I then checked the default IP address of 192.168.1.1 and found I STILL could not get into the GUI. I then…</p>
+
+<p>Verified the LAN interface was connected by reactivating and reassigning ports, still could not access the GUI nor ping the PFSense.
+I found that this was the end of my diagnostics, and my only other recourse I had was to reimage the Jetway. After loading the install manger from the USB I reassigned ports and brought the Jetway online. On my server machine I proceeded to go to 192.168.1.1 and was successfully able to access the GUI login page. I had solved my issue!</p>]]></content><author><name>J.P.</name></author><summary type="html"><![CDATA[Sitting here finishing up the last little bit of my Discrete Mathematics homework and I got to thinking about where I’ve come from. I went thru struggles and many-a-night up until 0200 trying to fix what I have broken. And so it reminded me of a write-up I made back in April on the 9th. This one here:]]></summary></entry><entry><title type="html">The Day the Lab Became Real: Investigating My First Real Threat</title><link href="https://johnwesleypaigejr.com/2025/07/12/the-day-the-lab-became-real.html" rel="alternate" type="text/html" title="The Day the Lab Became Real: Investigating My First Real Threat" /><published>2025-07-12T18:00:00-04:00</published><updated>2025-07-12T18:00:00-04:00</updated><id>https://johnwesleypaigejr.com/2025/07/12/the-day-the-lab-became-real</id><content type="html" xml:base="https://johnwesleypaigejr.com/2025/07/12/the-day-the-lab-became-real.html"><![CDATA[<p>About three weeks ago, I discovered something that made my stomach drop.</p>
+
+<p>Buried deep in my pfSense ruleset, a leftover from early troubleshooting, was a rule that said:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Allow All Traffic (LAN -&gt; Any)</code>.</p>
+
+<p>I had left the digital front door wide open while I was setting things up.</p>
 
 <p>I fixed it immediately, of course. But the rule had been active for weeks, and I had no idea what, if anything, might have slipped through. The fear of the unknown is a powerful thing in cybersecurity.</p>
 
 <p>On July 12, 2025, that fear became real. I got a Telegram ping from my Suricata alert pipeline:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SURICATA STREAM SHUTDOWN RST invalid ack
+
 {TCP} 24.210.78.186:80 -&gt; 202.112.237.233:12338
 </code></pre></div></div>
 
 <p>It was an outbound connection to an IP address in China, exhibiting behavior that matched patterns I’d seen for Command and Control (C2) channels.</p>
 
-<p>That was the moment everything changed. I wasn’t just monitoring traffic in a lab anymore. I was investigating a potential breach on my own network. This is no longer just an experiment; it’s a real-world defense scenario, and I’m documenting every step of the investigation. More to follow.</p>]]></content><author><name>J.P.</name></author><summary type="html"><![CDATA[About three weeks ago, I discovered something that made my stomach drop.]]></summary></entry><entry><title type="html">The Day the Lab Became Real: Investigating My First Real Threat</title><link href="http://localhost:4000/2025/05/06/home-lab-setup.html" rel="alternate" type="text/html" title="The Day the Lab Became Real: Investigating My First Real Threat" /><published>2025-05-06T15:30:00-04:00</published><updated>2025-05-06T15:30:00-04:00</updated><id>http://localhost:4000/2025/05/06/home-lab-setup</id><content type="html" xml:base="http://localhost:4000/2025/05/06/home-lab-setup.html"><![CDATA[<p>Today I configured pfSense and started experimenting with Suricata. It’s wild how much you can learn from hands-on work.</p>
+<p>That was the moment everything changed. I wasn’t just monitoring traffic in a lab anymore. I was investigating a potential breach on my own network. This is no longer just an experiment; it’s a real-world defense scenario, and I’m documenting every step of the investigation. More to follow.</p>]]></content><author><name>J.P.</name></author><summary type="html"><![CDATA[About three weeks ago, I discovered something that made my stomach drop.]]></summary></entry><entry><title type="html">Home Lab Setup - Side 3</title><link href="https://johnwesleypaigejr.com/2025/05/06/home-lab-setup-side-3.html" rel="alternate" type="text/html" title="Home Lab Setup - Side 3" /><published>2025-05-06T15:30:00-04:00</published><updated>2025-05-06T15:30:00-04:00</updated><id>https://johnwesleypaigejr.com/2025/05/06/home-lab-setup-side-3</id><content type="html" xml:base="https://johnwesleypaigejr.com/2025/05/06/home-lab-setup-side-3.html"><![CDATA[<p>I am a HUGE Gundam nerd All of my devices are themed based on vehicles, equipment or vessels from the ‘Universal Century’ time line. And so I saw it fitting that for my network the name should follow that same schema. So…. WELCOME TO SIDE 3!!! IYKTYK</p>
 
-<p>Having a physical firewall and IDS/IPS running in my own environment is a game-changer for understanding network defense concepts. Next up: getting all the logs piped into Splunk correctly.</p>]]></content><author><name>J.P.</name></author><summary type="html"><![CDATA[Today I configured pfSense and started experimenting with Suricata. It’s wild how much you can learn from hands-on work.]]></summary></entry><entry><title type="html">The Day the Lab Became Real: Investigating My First Real Threat</title><link href="http://localhost:4000/2025/05/06/welcome-to-my-blog.html" rel="alternate" type="text/html" title="The Day the Lab Became Real: Investigating My First Real Threat" /><published>2025-05-06T10:30:00-04:00</published><updated>2025-05-06T10:30:00-04:00</updated><id>http://localhost:4000/2025/05/06/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/2025/05/06/welcome-to-my-blog.html"><![CDATA[<p>This is my first blog post on the new Jekyll-powered site! I’m learning how to self-host a website and use a static site generator to build a professional, fast, and secure blog.</p>
+<p>Today I configured pfSense and started experimenting with Suricata. It’s wild how much you can learn from hands-on work.</p>
+
+<p>Having a physical firewall and IDS/IPS running in my own environment is a game-changer for understanding network defense concepts. Next up: getting all the logs piped into Splunk correctly.</p>]]></content><author><name>J.P.</name></author><summary type="html"><![CDATA[I am a HUGE Gundam nerd All of my devices are themed based on vehicles, equipment or vessels from the ‘Universal Century’ time line. And so I saw it fitting that for my network the name should follow that same schema. So…. WELCOME TO SIDE 3!!! IYKTYK]]></summary></entry><entry><title type="html">Welcome to my blog!!!</title><link href="https://johnwesleypaigejr.com/2025/05/06/welcome-to-my-blog.html" rel="alternate" type="text/html" title="Welcome to my blog!!!" /><published>2025-05-06T10:30:00-04:00</published><updated>2025-05-06T10:30:00-04:00</updated><id>https://johnwesleypaigejr.com/2025/05/06/welcome-to-my-blog</id><content type="html" xml:base="https://johnwesleypaigejr.com/2025/05/06/welcome-to-my-blog.html"><![CDATA[<p>This is my first blog post on the new Jekyll-powered site! I’m learning how to self-host a website and use a static site generator to build a professional, fast, and secure blog.</p>
 
 <p>It’s a big step up from my initial JavaScript and JSON experiment, but the power and scalability is incredible. Stay tuned for more updates on my home lab and cybersecurity journey.</p>]]></content><author><name>J.P.</name></author><summary type="html"><![CDATA[This is my first blog post on the new Jekyll-powered site! I’m learning how to self-host a website and use a static site generator to build a professional, fast, and secure blog.]]></summary></entry></feed>
