@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  </head>
-  <body>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Content Manager</title>
+  <!-- Allow loading CMS script from jsDelivr -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net;
+    style-src 'self' 'unsafe-inline';
+    connect-src 'self';
+    img-src 'self' data:;
+    font-src 'self';
+    frame-ancestors 'self';
+  ">
+  <script src="https://cdn.jsdelivr.net/npm/netlify-cms-app@2.15.72/dist/netlify-cms-app.js"></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', () => {
+      if (window.NetlifyCmsApp) {
+        window.NetlifyCmsApp.init();
+      } else {
+        console.error('NetlifyCmsApp is not defined');
+      }
+    });
+  </script>
+</body>
 </html>
