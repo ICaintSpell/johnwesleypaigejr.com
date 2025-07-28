@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Content Manager</title>
+<script src="https://cdn.jsdelivr.net/npm/netlify-cms-app@^2.15.72/dist/netlify-cms-app.js"></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', () => {
+      if (window.NetlifyCmsApp) {
+        window.NetlifyCmsApp.init();
+      } else {
+        console.error('NetlifyCmsApp is not defined');
+      }
+    });
+  </script>
+</body>
+</html>
