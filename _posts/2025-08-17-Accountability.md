@@ -15,9 +15,13 @@ Enter my brain.
 For a bit of context, I live with non-hyper adult ADHD. (You’d think they would just call it ADD like they did in the “olden days”, but what eves…) Needless to say, staying on task is a task in and of itself. Focusing my thoughts and ideas can be a bit of a “struggle.” I work through it and manage. I will admit that sometimes things slip my mind. Right now there is a list of things to either start or finish. Things that are just out there in limbo. For instance things I have not started/finished…
 
 1)	Reconfiguring OpenVPN from where I broke it while remediating the intrusions I suffered because “SOMEBODY” misconfigured the firewall.
+
 2)	Finishing the coding of JohnWesleyPaigeJr.com for the ability to see historical blog posts.
+
 3)	Setting up my NAS. Now this one will be fun and COMPLETELY ghetto. All while being innovative and cost effective. (More to come on that build later)
+
 4)	And lastly…. I can’t remember what number 4 was. And that goes back to speak to the aforementioned ADHD… But I’m sure it will come back  to me though, eventually. 
+
 Point being, without clear direction you have nothing. As the old adage goes; proper planning prevents piss pour performance, and right now my execution is HORRENDOUS!!!  
 
 What was the point of saying all of that? Well this is to hold myself accountable, the “Know thyself” moment….
