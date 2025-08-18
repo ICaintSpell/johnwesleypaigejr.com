@@ -12,6 +12,11 @@ linkedin_username: john-paige-jr-09149997
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate   #  Added pagination plugin
+
+# Pagination settings
+paginate: 5            # show 5 posts per page
+paginate_path: "/page:num/"   # generates /page2, /page3, etc.
 
 # Include the admin folder for Netlify CMS
 include:
