@@ -29,7 +29,7 @@ For a bit of context, I live with non-hyper adult ADHD. (You’d think they woul
 4)	And lastly…. I can’t remember what number 4 was. And that goes back to speak to the aforementioned ADHD… But I’m sure it will come back  to me though, eventually. <br />
 <br />
 
-Point being, without clear direction you have nothing. As the old adage goes; proper planning prevents piss pour performance, and right now my execution is HORRENDOUS!!! <br />
+Point being, without clear direction you have nothing. As the old adage goes; "proper planning prevents piss pour performance". And right now my execution is HORRENDOUS!!! <br />
 <br />
 
 What was the point of saying all of that? Well this is to hold myself accountable, the “Know thyself” moment….<br>
